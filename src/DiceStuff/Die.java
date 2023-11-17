@@ -2,7 +2,7 @@ package DiceStuff;
 
 public class Die {
     private int max = 6;
-    Color color = Color.White;
+    Color color = Color.WHITE;
     public Die(){
 
     }
@@ -17,7 +17,7 @@ public class Die {
         this.max = max;
     }
 
-    public int roll(){
-        return (int)(Math.random()*max + 1);
+    public DieResult roll(){
+        return new DieResult(this.color,(int)Math.random()*max + 1);
     }
 }
